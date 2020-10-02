@@ -1,0 +1,33 @@
+{
+    "name": "workhouse-advertising/omnipay-humm",
+    "type": "library",
+    "description": "Humm Payments gateway for Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment",
+        "humm",
+        "purchase"
+    ],
+    "homepage": "https://github.com/workhouse-advertising/omnipay-humm",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Geoghegan",
+            "email": "simon@workhouseadvertising.com.au"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\Humm\\" : "src/"
+        }
+    },
+    "require": {
+        "omnipay/common": "^3"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3"
+    }
+}
