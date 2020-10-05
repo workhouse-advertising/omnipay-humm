@@ -32,6 +32,8 @@ class CompleteAuthorizeResponse extends Response
 
     public function getTransactionReference()
     {
-        return ($this->getData()['x_gateway_reference'] ?? null);
+        // return ($this->getData()['x_gateway_reference'] ?? null);
+        // NOTE: The purchase number is what is used for refunds.
+        return ($this->getData()['x_purchase_number'] ?? null);
     }
 }

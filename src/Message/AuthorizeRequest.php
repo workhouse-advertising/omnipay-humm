@@ -14,10 +14,11 @@ use Omnipay\Humm\Message\AuthorizeResponse;
 class AuthorizeRequest extends AbstractRequest
 {
     /**
-     * No services accessed here.
+     * @inheritDoc
      */
     public function getEndpoint($service = null)
     {
+        // No endpoint as the response is a redirect.
         return null;
     }
 

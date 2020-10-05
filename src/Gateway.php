@@ -37,12 +37,16 @@ class Gateway extends AbstractGateway
         return $this->createRequest(AuthorizeRequest::class, $parameters);
     }
 
+    /**
+     * @inheritDoc
+     */
     public function completeAuthorize(array $options = [])
     {
         return $this->createRequest(CompleteAuthorizeRequest::class, $options);
     }
 
-    // TODO: Implement refund handling etc...
+    // TODO: It doesn't look like there are any capture or void endpoints for Humm.
+    //       Confirm that this is the case. See https://docs.shophumm.com.au/custom_integration/checkout_api/
 
     // public function capture(array $options = [])
     // {
@@ -54,8 +58,11 @@ class Gateway extends AbstractGateway
     //     return $this->createRequest(CancelRequest::class, $options);
     // }
 
-    // public function refund(array $options = [])
-    // {
-    //     return $this->createRequest(RefundRequest::class, $options);
-    // }
+    /**
+     * @inheritDoc
+     */
+    public function refund(array $options = [])
+    {
+        return $this->createRequest(RefundRequest::class, $options);
+    }
 }
